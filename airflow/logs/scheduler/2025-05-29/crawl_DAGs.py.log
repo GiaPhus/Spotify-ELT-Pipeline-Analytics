@@ -1,0 +1,21 @@
+[2025-05-29T17:20:05.032+0000] {processor.py:161} INFO - Started process (PID=165) to work on /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:20:05.033+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crawl_DAGs.py for tasks to queue
+[2025-05-29T17:20:05.035+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:05.035+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:20:05.673+0000] {processor.py:840} INFO - DAG(s) 'crawl_and_ingest_data_into_mongoDB' retrieved from /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:20:05.693+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:05.692+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-29T17:20:05.708+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:05.708+0000] {dag.py:3954} INFO - Setting next_dagrun for crawl_and_ingest_data_into_mongoDB to 2025-05-29 17:20:05.669944+00:00, run_after=2025-05-29 17:22:05.669944+00:00
+[2025-05-29T17:20:05.721+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_DAGs.py took 0.694 seconds
+[2025-05-29T17:20:35.936+0000] {processor.py:161} INFO - Started process (PID=461) to work on /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:20:35.937+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crawl_DAGs.py for tasks to queue
+[2025-05-29T17:20:35.939+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:35.938+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:20:36.389+0000] {processor.py:840} INFO - DAG(s) 'crawl_and_ingest_data_into_mongoDB' retrieved from /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:20:36.466+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:36.466+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-29T17:20:36.480+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:36.479+0000] {dag.py:3954} INFO - Setting next_dagrun for crawl_and_ingest_data_into_mongoDB to 2025-05-29 17:20:36.387450+00:00, run_after=2025-05-29 17:22:36.387450+00:00
+[2025-05-29T17:20:36.504+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_DAGs.py took 0.573 seconds
+[2025-05-29T17:21:06.567+0000] {processor.py:161} INFO - Started process (PID=744) to work on /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:21:06.568+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/crawl_DAGs.py for tasks to queue
+[2025-05-29T17:21:06.570+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:21:06.570+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:21:07.032+0000] {processor.py:840} INFO - DAG(s) 'crawl_and_ingest_data_into_mongoDB' retrieved from /opt/airflow/dags/crawl_DAGs.py
+[2025-05-29T17:21:07.125+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:21:07.125+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-29T17:21:07.141+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:21:07.141+0000] {dag.py:3954} INFO - Setting next_dagrun for crawl_and_ingest_data_into_mongoDB to 2025-05-29 17:21:07.030727+00:00, run_after=2025-05-29 17:23:07.030727+00:00
+[2025-05-29T17:21:07.171+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/crawl_DAGs.py took 0.609 seconds

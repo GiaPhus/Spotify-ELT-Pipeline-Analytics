@@ -1,0 +1,21 @@
+[2025-05-29T17:20:06.078+0000] {processor.py:161} INFO - Started process (PID=239) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:20:06.079+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2025-05-29T17:20:06.081+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:06.081+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:20:06.092+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:20:06.102+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:06.102+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-29T17:20:06.122+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:06.122+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2025-05-28 00:00:00+00:00, run_after=2025-05-29 00:00:00+00:00
+[2025-05-29T17:20:06.137+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.064 seconds
+[2025-05-29T17:20:37.115+0000] {processor.py:161} INFO - Started process (PID=512) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:20:37.115+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2025-05-29T17:20:37.118+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:37.117+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:20:37.125+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:20:37.239+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:37.239+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-29T17:20:37.264+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:20:37.264+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2025-05-28 00:00:00+00:00, run_after=2025-05-29 00:00:00+00:00
+[2025-05-29T17:20:37.286+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.179 seconds
+[2025-05-29T17:21:07.426+0000] {processor.py:161} INFO - Started process (PID=785) to work on /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:21:07.426+0000] {processor.py:830} INFO - Processing file /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py for tasks to queue
+[2025-05-29T17:21:07.428+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:21:07.428+0000] {dagbag.py:545} INFO - Filling up the DagBag from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:21:07.434+0000] {processor.py:840} INFO - DAG(s) 'example_setup_teardown' retrieved from /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py
+[2025-05-29T17:21:07.451+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:21:07.451+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2025-05-29T17:21:07.471+0000] {logging_mixin.py:188} INFO - [2025-05-29T17:21:07.471+0000] {dag.py:3954} INFO - Setting next_dagrun for example_setup_teardown to 2025-05-28 00:00:00+00:00, run_after=2025-05-29 00:00:00+00:00
+[2025-05-29T17:21:07.487+0000] {processor.py:183} INFO - Processing /home/airflow/.local/lib/python3.12/site-packages/airflow/example_dags/example_setup_teardown.py took 0.066 seconds

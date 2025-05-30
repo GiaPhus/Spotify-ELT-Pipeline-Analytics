@@ -1,7 +1,7 @@
 FROM jupyter/all-spark-notebook:python-3.11
 USER root
 
-RUN curl -O https://dlcdn.apache.org/spark/spark-3.4.3/spark-3.4.3-bin-hadoop3.tgz \
+RUN curl -O https://archive.apache.org/dist/spark/spark-3.4.3/spark-3.4.3-bin-hadoop3.tgz\
     && tar zxvf spark-3.4.3-bin-hadoop3.tgz \
     && rm -rf spark-3.4.3-bin-hadoop3.tgz \
     && mv spark-3.4.3-bin-hadoop3/ /usr/local/ \
@@ -22,7 +22,7 @@ RUN curl -O https://repo1.maven.org/maven2/software/amazon/awssdk/s3/2.18.41/s3-
     && mv hadoop-aws-3.3.2.jar /usr/local/spark/jars
 
 
-RUN pip install pandas  minio dagster plotly==5.14.1\
+RUN pip install pandas  minio plotly==5.14.1\
      tenacity==8.2.2\
      dash_ag_grid dash_bootstrap_components \
      dash \

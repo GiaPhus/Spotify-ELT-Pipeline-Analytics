@@ -1,0 +1,882 @@
+[2025-05-30T04:40:33.123+0000] {processor.py:161} INFO - Started process (PID=167) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:40:33.124+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:40:33.128+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:40:33.128+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:40:33.459+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:40:33.446+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:40:33.460+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:40:33.516+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.402 seconds
+[2025-05-30T04:41:03.778+0000] {processor.py:161} INFO - Started process (PID=437) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:41:03.779+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:41:03.782+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:41:03.781+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:41:04.080+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:41:04.077+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:41:04.082+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:41:04.112+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.340 seconds
+[2025-05-30T04:41:34.366+0000] {processor.py:161} INFO - Started process (PID=710) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:41:34.367+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:41:34.369+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:41:34.369+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:41:34.650+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:41:34.649+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:41:34.651+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:41:34.662+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.302 seconds
+[2025-05-30T04:42:04.744+0000] {processor.py:161} INFO - Started process (PID=992) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:42:04.745+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:42:04.748+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:42:04.747+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:42:05.089+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:42:05.088+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:42:05.090+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:42:05.110+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.373 seconds
+[2025-05-30T04:42:35.254+0000] {processor.py:161} INFO - Started process (PID=1265) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:42:35.255+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:42:35.257+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:42:35.256+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:42:35.599+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:42:35.597+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:42:35.600+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:42:35.629+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.382 seconds
+[2025-05-30T04:43:05.749+0000] {processor.py:161} INFO - Started process (PID=1538) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:43:05.749+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:43:05.751+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:43:05.751+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:43:06.032+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:43:06.031+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:43:06.033+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:43:06.060+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.317 seconds
+[2025-05-30T04:43:36.933+0000] {processor.py:161} INFO - Started process (PID=1810) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:43:36.934+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:43:36.935+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:43:36.935+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:43:37.182+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:43:37.181+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:43:37.183+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:43:37.194+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.266 seconds
+[2025-05-30T04:44:07.585+0000] {processor.py:161} INFO - Started process (PID=2083) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:44:07.588+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:44:07.591+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:44:07.590+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:44:07.899+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:44:07.897+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:44:07.900+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:44:07.916+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.338 seconds
+[2025-05-30T04:44:37.970+0000] {processor.py:161} INFO - Started process (PID=2366) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:44:37.971+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:44:37.973+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:44:37.972+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:44:38.215+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:44:38.214+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:44:38.216+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:44:38.242+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.276 seconds
+[2025-05-30T04:45:08.453+0000] {processor.py:161} INFO - Started process (PID=2629) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:45:08.454+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:45:08.455+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:45:08.455+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:45:08.726+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:45:08.724+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:45:08.726+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:45:08.741+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.293 seconds
+[2025-05-30T04:45:39.506+0000] {processor.py:161} INFO - Started process (PID=2902) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:45:39.507+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:45:39.509+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:45:39.509+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:45:39.813+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:45:39.810+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:45:39.814+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:45:39.830+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.329 seconds
+[2025-05-30T04:46:10.202+0000] {processor.py:161} INFO - Started process (PID=3182) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:46:10.206+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:46:10.213+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:46:10.212+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:46:11.144+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:46:11.134+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:46:11.147+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:46:11.204+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 1.026 seconds
+[2025-05-30T04:46:41.983+0000] {processor.py:161} INFO - Started process (PID=3462) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:46:41.983+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:46:41.985+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:46:41.985+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:46:42.239+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:46:42.237+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:46:42.239+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:46:42.254+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.276 seconds
+[2025-05-30T04:47:12.299+0000] {processor.py:161} INFO - Started process (PID=3734) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:47:12.300+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:47:12.301+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:47:12.301+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:47:12.628+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:47:12.625+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:47:12.629+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:47:12.648+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.354 seconds
+[2025-05-30T04:47:43.500+0000] {processor.py:161} INFO - Started process (PID=4007) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:47:43.501+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:47:43.503+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:47:43.503+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:47:43.787+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:47:43.785+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:47:43.788+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:47:43.804+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.309 seconds
+[2025-05-30T04:48:13.847+0000] {processor.py:161} INFO - Started process (PID=4290) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:48:13.848+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:48:13.850+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:48:13.850+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:48:14.139+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:48:14.137+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:48:14.140+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:48:14.158+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.316 seconds
+[2025-05-30T04:48:45.167+0000] {processor.py:161} INFO - Started process (PID=4563) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:48:45.167+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:48:45.170+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:48:45.169+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:48:45.525+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:48:45.523+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:48:45.528+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:48:45.568+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.407 seconds
+[2025-05-30T04:49:16.073+0000] {processor.py:161} INFO - Started process (PID=4836) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:49:16.074+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T04:49:16.076+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:49:16.075+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:49:16.329+0000] {logging_mixin.py:188} INFO - [2025-05-30T04:49:16.327+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T04:49:16.330+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T04:49:16.343+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.274 seconds
+[2025-05-30T05:20:43.076+0000] {processor.py:161} INFO - Started process (PID=5094) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:20:43.083+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:20:43.088+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:20:43.088+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:20:43.501+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:20:43.500+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:20:43.502+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:20:43.520+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.467 seconds
+[2025-05-30T05:21:14.358+0000] {processor.py:161} INFO - Started process (PID=5367) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:21:14.359+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:21:14.361+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:21:14.361+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:21:14.612+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:21:14.610+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:21:14.612+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:21:14.637+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.284 seconds
+[2025-05-30T05:21:45.204+0000] {processor.py:161} INFO - Started process (PID=5640) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:21:45.205+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:21:45.207+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:21:45.206+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:21:45.505+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:21:45.500+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:21:45.507+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:21:45.529+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.332 seconds
+[2025-05-30T05:22:16.276+0000] {processor.py:161} INFO - Started process (PID=5913) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:22:16.277+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:22:16.279+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:22:16.278+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:22:16.521+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:22:16.519+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:22:16.521+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:22:16.544+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.273 seconds
+[2025-05-30T05:22:46.923+0000] {processor.py:161} INFO - Started process (PID=6186) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:22:46.925+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:22:46.928+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:22:46.927+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:22:47.336+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:22:47.335+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:22:47.338+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:22:47.370+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.456 seconds
+[2025-05-30T05:23:17.436+0000] {processor.py:161} INFO - Started process (PID=6456) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:23:17.437+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:23:17.439+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:23:17.438+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:23:17.695+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:23:17.693+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:23:17.696+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:23:17.721+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.291 seconds
+[2025-05-30T05:23:48.036+0000] {processor.py:161} INFO - Started process (PID=6729) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:23:48.037+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:23:48.039+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:23:48.038+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:23:48.296+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:23:48.295+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:23:48.297+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:23:48.330+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.299 seconds
+[2025-05-30T05:24:18.431+0000] {processor.py:161} INFO - Started process (PID=7002) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:24:18.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:24:18.434+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:24:18.434+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:24:18.663+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:24:18.662+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 25, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:24:18.664+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:24:18.676+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.249 seconds
+[2025-05-30T05:24:49.403+0000] {processor.py:161} INFO - Started process (PID=7275) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:24:49.405+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:24:49.408+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:24:49.407+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:24:49.684+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:24:49.682+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 28, in MongoIO
+    raise ValueError("Thiếu thông tin kết nối MongoDB (password)")
+ValueError: Thiếu thông tin kết nối MongoDB (password)
+[2025-05-30T05:24:49.685+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:24:49.735+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.337 seconds
+[2025-05-30T05:25:20.105+0000] {processor.py:161} INFO - Started process (PID=7548) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:25:20.106+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:25:20.108+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:25:20.107+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:25:20.252+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:25:20.248+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 13, in <module>
+    from IOManager.MongoDBio import MongoIO
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 8, in <module>
+    load_dotenv(dotenv_path=os.path.join(BASE_DIR, '.env'))
+                                         ^^^^^^^^
+NameError: name 'BASE_DIR' is not defined
+[2025-05-30T05:25:20.255+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:25:20.270+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.170 seconds
+[2025-05-30T05:25:51.046+0000] {processor.py:161} INFO - Started process (PID=7821) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:25:51.048+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:25:51.049+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:25:51.049+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:25:51.204+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:25:51.202+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:25:51.204+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:25:51.220+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.180 seconds
+[2025-05-30T05:26:21.768+0000] {processor.py:161} INFO - Started process (PID=8094) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:26:21.769+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:26:21.772+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:26:21.771+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:26:21.954+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:26:21.952+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:26:21.955+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:26:21.974+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.214 seconds
+[2025-05-30T05:26:52.051+0000] {processor.py:161} INFO - Started process (PID=8366) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:26:52.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:26:52.054+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:26:52.054+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:26:52.254+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:26:52.253+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:26:52.255+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:26:52.276+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.232 seconds
+[2025-05-30T05:27:22.663+0000] {processor.py:161} INFO - Started process (PID=8639) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:27:22.664+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:27:22.665+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:27:22.665+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:27:22.829+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:27:22.827+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:27:22.830+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:27:22.847+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.189 seconds
+[2025-05-30T05:27:53.432+0000] {processor.py:161} INFO - Started process (PID=8912) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:27:53.433+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:27:53.435+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:27:53.435+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:27:53.580+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:27:53.578+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:27:53.581+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:27:53.596+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.169 seconds
+[2025-05-30T05:28:24.360+0000] {processor.py:161} INFO - Started process (PID=9185) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:28:24.361+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:28:24.364+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:28:24.363+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:28:24.580+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:28:24.578+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 19, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:28:24.581+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:28:24.613+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.261 seconds
+[2025-05-30T05:28:54.942+0000] {processor.py:161} INFO - Started process (PID=9458) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:28:54.943+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:28:54.944+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:28:54.944+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:28:55.124+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:28:55.122+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:28:55.125+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:28:55.140+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.203 seconds
+[2025-05-30T05:29:25.458+0000] {processor.py:161} INFO - Started process (PID=9731) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:29:25.459+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:29:25.461+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:29:25.461+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:29:25.635+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:29:25.640+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:29:25.638+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:29:25.640+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:29:25.657+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.205 seconds
+[2025-05-30T05:29:55.756+0000] {processor.py:161} INFO - Started process (PID=10004) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:29:55.757+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:29:55.759+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:29:55.759+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:29:55.931+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:29:55.936+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:29:55.934+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:29:55.936+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:29:55.955+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.206 seconds
+[2025-05-30T05:30:26.024+0000] {processor.py:161} INFO - Started process (PID=10281) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:30:26.025+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:30:26.027+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:30:26.027+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:30:26.163+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:30:26.167+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:30:26.166+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:30:26.168+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:30:26.183+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.166 seconds
+[2025-05-30T05:30:56.254+0000] {processor.py:161} INFO - Started process (PID=10559) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:30:56.255+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:30:56.257+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:30:56.256+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:30:56.392+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:30:56.396+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:30:56.394+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:30:56.397+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:30:56.412+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.162 seconds
+[2025-05-30T05:31:26.458+0000] {processor.py:161} INFO - Started process (PID=10822) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:31:26.459+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:31:26.460+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:31:26.460+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:31:26.624+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:31:26.629+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:31:26.627+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:31:26.630+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:31:26.658+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.206 seconds
+[2025-05-30T05:31:56.729+0000] {processor.py:161} INFO - Started process (PID=11095) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:31:56.730+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:31:56.732+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:31:56.732+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:31:56.876+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:31:56.880+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:31:56.879+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:31:56.881+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:31:56.896+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.172 seconds
+[2025-05-30T05:32:27.013+0000] {processor.py:161} INFO - Started process (PID=11368) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:32:27.014+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:32:27.016+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:32:27.015+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:32:27.157+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:32:27.164+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:32:27.163+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:32:27.165+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:32:27.183+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.177 seconds
+[2025-05-30T05:32:57.250+0000] {processor.py:161} INFO - Started process (PID=11705) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:32:57.252+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:32:57.256+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:32:57.254+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:32:57.687+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:32:57.698+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:32:57.695+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:32:57.699+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:00.140+0000] {processor.py:161} INFO - Started process (PID=168) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:00.142+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:40:00.144+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:40:00.143+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:00.372+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:40:00.378+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:40:00.375+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:40:00.379+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:00.412+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.278 seconds
+[2025-05-30T05:40:31.211+0000] {processor.py:161} INFO - Started process (PID=441) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:31.212+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:40:31.213+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:40:31.213+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:31.394+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:40:31.399+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:40:31.398+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:40:31.400+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:40:31.420+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.215 seconds
+[2025-05-30T05:41:01.891+0000] {processor.py:161} INFO - Started process (PID=714) to work on /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:41:01.893+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/bronze/MongotoHDFS.py for tasks to queue
+[2025-05-30T05:41:01.895+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:41:01.894+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:41:02.204+0000] {logging_mixin.py:188} INFO - None
+[2025-05-30T05:41:02.210+0000] {logging_mixin.py:188} INFO - [2025-05-30T05:41:02.208+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/bronze/MongotoHDFS.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/bronze/MongotoHDFS.py", line 77, in <module>
+    with MongoIO() as client:
+  File "/usr/local/lib/python3.12/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/IOManager/MongoDBio.py", line 20, in MongoIO
+    raise ValueError(f"Thiếu thông tin kết nối MongoDB ({user})")
+ValueError: Thiếu thông tin kết nối MongoDB ()
+[2025-05-30T05:41:02.211+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/bronze/MongotoHDFS.py
+[2025-05-30T05:41:02.226+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/bronze/MongotoHDFS.py took 0.342 seconds
