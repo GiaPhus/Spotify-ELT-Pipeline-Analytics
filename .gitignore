@@ -1,7 +1,23 @@
-.env
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
 
+airflow_venv/
+env/
+venv/
+
+airflow/logs/
+airflow/airflow.db
+airflow/unittests.cfg
+
+.env
 
 crawl/
 
+.DS_Store
+Thumbs.db
 
-
+.ipynb_checkpoints/
