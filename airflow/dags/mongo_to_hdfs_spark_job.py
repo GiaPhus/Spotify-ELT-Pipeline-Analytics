@@ -32,7 +32,7 @@ def get_schema(collections):
                 ])
         ),
         StructField("genres",ArrayType(StringType()),True),
-        StructField("id",ArrayType(StringType()),True),
+        StructField("id",StringType(),True),
         StructField("images",ArrayType(StructType([
             StructField("height",IntegerType(),True),
             StructField("url",StringType(),True),
