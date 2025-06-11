@@ -28,9 +28,10 @@ with DAG(
         packages='org.mongodb.spark:mongo-spark-connector_2.12:10.1.1',
         verbose=True,
         conf={
-            "spark.master": "spark://spark-master1:7077",
+            "spark.master": "local[*]",
             "spark.executor.memory": "1g"
-        }
+        },
+        conn_id='spark_default_conn'
     )
 
     start_task >> spark_submit_task >> end_task

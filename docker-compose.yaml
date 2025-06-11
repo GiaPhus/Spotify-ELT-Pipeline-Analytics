@@ -26,9 +26,11 @@ x-airflow-common:
     - ./airflow/config:/opt/airflow/config
     - ./airflow/requirements.txt:/opt/airflow/requirements.txt
     - ./airflow/plugins:/opt/airflow/plugins
+    - ./airflow/include:/opt/airflow/include
+    - /etc/localtime:/etc/localtime:ro
+    - ${AIRFLOW_PROJ_DIR:-.}:/opt/airflow/data
     # - ${AIRFLOW_PROJ_DIR:-.}/airflow.cfg:/opt/airflow/airflow.cfg
 
-    - ${AIRFLOW_PROJ_DIR:-.}:/opt/airflow/data
   user: "${AIRFLOW_UID:-50000}:0"
   # user: "0:0"
 
@@ -39,7 +41,7 @@ x-airflow-common:
     postgres:
       condition: service_healthy
 services:
-  #HDFS & YARN 
+  # HDFS & YARN 
   namenode:
     container_name: namenode
     image: apache/hadoop:3
@@ -99,7 +101,7 @@ services:
     user: root
     networks:
       - spotify_network
-  # MINIO
+  #MINIO
   # minio1:
   #   container_name: "minio1"
   #   image: "minio/minio"
@@ -112,7 +114,7 @@ services:
   #   env_file:
   #     - .env
   #   networks:
-  #     - de_network
+  #     - spotify_network
   
 
   # mc1:
@@ -126,51 +128,51 @@ services:
   #   depends_on:
   #     - minio1
   #   networks:
-  #     - de_network
+  #     - spotify_network
 
   # Spark
-  spark-master1:
-    build:
-      context: ./spark
-      dockerfile: ./Dockerfile
-    image: spark_master:latest
-    container_name: "spark-master1"
-    environment:
-      - SPARK_MODE=master
-      - SPARK_LOCAL_IP=spark-master1
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      - SPARK_SSL_ENABLED=no
-    ports:
-      - "7077:7077"
-      - "8080:8080"
-    expose:
-      - "7077"
-    volumes:
-      - ./airflow/include:/usr/local/airflow/include
-      - ./spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
-    networks:
-      - spotify_network
+  # spark-master1:
+  #   build:
+  #     context: ./spark
+  #     dockerfile: ./Dockerfile
+  #   image: spark_master:latest
+  #   container_name: "spark-master1"
+  #   environment:
+  #     - SPARK_MODE=master
+  #     - SPARK_LOCAL_IP=spark-master1
+  #     - SPARK_RPC_AUTHENTICATION_ENABLED=no
+  #     - SPARK_RPC_ENCRYPTION_ENABLED=no
+  #     - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+  #     - SPARK_SSL_ENABLED=no
+  #   ports:
+  #     - "7077:7077"
+  #     - "8080:8080"
+  #   expose:
+  #     - "7077"
+  #   volumes:
+  #     - ./airflow/include:/usr/local/airflow/include
+  #     - ./spark/spark-defaults.conf:/opt/bitnami/spark/conf/spark-defaults.conf
+  #   networks:
+  #     - spotify_network
     
-  spark_worker:
-    image: docker.io/bitnami/spark:3.4.3
-    deploy:
-      replicas: 2
-    command: start-slave.sh spark://spark-master1:7077
-    environment:
-      - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master1:7077
-      - SPARK_WORKER_MEMORY=4G
-      - SPARK_WORKER_CORES=2
-      - SPARK_RPC_AUTHENTICATION_ENABLED=no
-      - SPARK_RPC_ENCRYPTION_ENABLED=no
-      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
-      - SPARK_SSL_ENABLED=no
-    networks:
-      - spotify_network
-    depends_on:
-      - spark-master1
+  # spark_worker:
+  #   image: docker.io/bitnami/spark:3.4.3
+  #   deploy:
+  #     replicas: 2
+  #   command: start-slave.sh spark://spark-master1:7077
+  #   environment:
+  #     - SPARK_MODE=worker
+  #     - SPARK_MASTER_URL=spark://spark-master1:7077
+  #     - SPARK_WORKER_MEMORY=2G
+  #     - SPARK_WORKER_CORES=1
+  #     - SPARK_RPC_AUTHENTICATION_ENABLED=no
+  #     - SPARK_RPC_ENCRYPTION_ENABLED=no
+  #     - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+  #     - SPARK_SSL_ENABLED=no
+  #   networks:
+  #     - spotify_network
+  #   depends_on:
+  #     - spark-master1
 
   notebook:
     build:
@@ -254,11 +256,12 @@ services:
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
       _AIRFLOW_WWW_USER_PASSWORD: ${_AIRFLOW_WWW_USER_PASSWORD:-airflow}
     user: "0:0"
+    env_file:
+      - .env
     volumes:
       - ./airflow/dags:/opt/airflow/dags
       - ./airflow/logs:/opt/airflow/logs
       - ./airflow/plugins:/opt/airflow/plugins
-      - .:/opt/airflow
       # - .:/sources
     networks:
       - spotify_network
@@ -318,19 +321,21 @@ services:
   #   networks:
   #     - de_network
 
-  redis:
-    image: redis:latest
-    container_name: redis
-    ports:
-      - "6379:6379"
-    networks:
-      - spotify_network
+  # redis:
+  #   image: redis:latest
+  #   container_name: redis
+  #   ports:
+  #     - "6379:6379"
+  #   networks:
+  #     - spotify_network
 
   airflow-webserver:
     <<: *airflow-common
-    command: webserver
+    command: webserver --workers 2
     ports:
       - "8085:8080"
+    env_file:
+      - .env
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8085/health"]
       interval: 30s
@@ -345,7 +350,7 @@ services:
     deploy:
       resources:
         limits:
-          memory: 2G
+          memory: 512M
     networks:
       - spotify_network
 
@@ -359,6 +364,8 @@ services:
       retries: 5
       start_period: 30s
     restart: always
+    env_file:
+      - .env
     depends_on:
       <<: *airflow-common-depends-on
       airflow-init:
