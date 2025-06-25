@@ -1,0 +1,30 @@
+apache-airflow-providers-apache-spark==4.11.3
+apache-airflow-providers-mongo
+apache-airflow-providers-postgres
+apache-airflow-providers-http
+apache-airflow-providers-google
+
+pyspark==3.4.3
+beautifulsoup4==4.12.2
+lyricsgenius==3.0.1
+lxml==4.9.3
+requests==2.31.0
+tqdm==4.66.1
+alive-progress==3.1.5
+
+numpy==1.26.2
+pandas==2.1.3
+nltk==3.8.1
+
+# MongoDB client
+pymongo==4.6.0
+psycopg2-binary
+apache-airflow==2.9.2
+
+# Utility libraries
+pyparsing==3.1.1
+python-dateutil==2.8.2
+python-dotenv==1.0.0
+
+# Google API
+google-api-python-client==2.94.0
