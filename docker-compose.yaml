@@ -21,15 +21,19 @@ x-airflow-common:
     # _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:-}
     # AIRFLOW_CONFIG: '/opt/airflow/config/airflow.cfg'
   volumes:
-    - ./airflow/dags:/opt/airflow/dags
-    - ./airflow/logs:/opt/airflow/logs
-    - ./airflow/config:/opt/airflow/config
-    - ./airflow/requirements.txt:/opt/airflow/requirements.txt
-    - ./airflow/plugins:/opt/airflow/plugins
-    - ./airflow/include:/opt/airflow/include
-    - /etc/localtime:/etc/localtime:ro
+    # - ./.env:/opt/airflow/env
+    # - ./airflow/dags:/opt/airflow/dags
+    # - ./airflow/logs:/opt/airflow/logs
+    # - ./airflow/config:/opt/airflow/config
+    # - ./airflow/requirements.txt:/opt/airflow/requirements.txt
+    # - ./airflow/plugins:/opt/airflow/plugins
+    # - ./airflow/include:/opt/airflow/include
+    # - /etc/localtime:/etc/localtime:ro
     - ${AIRFLOW_PROJ_DIR:-.}:/opt/airflow/data
-    # - ${AIRFLOW_PROJ_DIR:-.}/airflow.cfg:/opt/airflow/airflow.cfg
+    - ./airflow:/opt/airflow
+    - /etc/localtime:/etc/localtime:ro
+    - ./.env:/opt/airflow/.env
+    - ${AIRFLOW_PROJ_DIR:-.}/airflow.cfg:/opt/airflow/airflow.cfg
 
   user: "${AIRFLOW_UID:-50000}:0"
   # user: "0:0"
@@ -370,6 +374,62 @@ services:
       <<: *airflow-common-depends-on
       airflow-init:
         condition: service_completed_successfully
+    networks:
+      - spotify_network
+
+  trino:
+    image: trinodb/trino
+    container_name: trino
+    ports:
+      - "8095:8080"
+    volumes:
+      - ./trino/etc:/etc/trino
+    depends_on:
+      - hive-metastore-db
+    networks:
+      - spotify_network
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    ports:
+      - "3000:3000"
+    environment:
+      - MB_DB_FILE=/metabase.db
+    volumes:
+      - ./metabase:/metabase.db
+    networks:
+      - spotify_network
+  
+  hive-metastore-db:
+    image: postgres:13
+    container_name: hive-metastore-db
+    environment:
+      POSTGRES_DB: metastore
+      POSTGRES_USER: hive
+      POSTGRES_PASSWORD: hive
+    ports:
+      - "5435:5432"
+    networks:
+      - spotify_network
+
+  hive-metastore:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    container_name: hive-metastore
+    environment:
+      HIVE_METASTORE_DRIVER: org.postgresql.Driver
+      HIVE_METASTORE_JDBC_URL: jdbc:postgresql://hive-metastore-db:5435/metastore
+      HIVE_METASTORE_DATABASE_TYPE: postgres
+      HIVE_METASTORE_DATABASE_HOST: hive-metastore-db
+      HIVE_METASTORE_DATABASE_NAME: metastore
+      HIVE_METASTORE_DATABASE_USER: hive
+      HIVE_METASTORE_DATABASE_PASSWORD: hive
+      HIVE_METASTORE_WAREHOUSE_DIR: hdfs://namenode:8020/gold
+    ports:
+      - "9083:9083"
+    depends_on:
+      - hive-metastore-db
+      - namenode
     networks:
       - spotify_network
 

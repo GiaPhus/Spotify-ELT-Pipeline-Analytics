@@ -2,16 +2,18 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.operators.dummy import DummyOperator
 from datetime import datetime, timedelta
-# from airflow.dags.bronze_layer import run_bronze_layer
-from pipeline.silver_layer import (
+from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOperator
+from silver_layer import (
     artists_silver_layer, feature_music_silver_layer,
     albums_silver_layer, tracks_silver_layer
 )
-from pipeline.gold_layer import (
-    gold_track_metadata, gold_feature_matrix, gold_track_search_index
+from warehouse_layer import (warehouse_spotify_dashboard,warehouse_track_recommendation)
+from gold_layer import (
+    gold_track_metadata, gold_feature_matrix
 )
 from IOManager.SparkIO import SparkIO
 from pyspark import SparkConf
+from airflow.utils.task_group import TaskGroup
 
 spark_conf = SparkConf() \
     .setAppName("SilverLayerProcessing") \
@@ -43,10 +45,13 @@ def run_gold_feature_matrix():
     with SparkIO(spark_conf) as spark:
         gold_feature_matrix(spark)
 
-def run_gold_search_index():
+def run_warehouse_dashboard():
     with SparkIO(spark_conf) as spark:
-        gold_track_search_index(spark)
+        warehouse_spotify_dashboard(spark)
 
+def run_warehouse_track_recommendation():
+    with SparkIO(spark_conf) as spark :
+        warehouse_track_recommendation(spark)
 default_args = {
     'owner': 'Phu',
     'depends_on_past': False,
@@ -66,33 +71,54 @@ with DAG(
 ) as dag:
     start = DummyOperator(task_id='start')
     end = DummyOperator(task_id='end')
+    
+    with TaskGroup("bronze_layer", tooltip="Ingest data from Mongo to HDFS") as bronze_layer:
+        bronze_task = SparkSubmitOperator(
+            task_id='bronze_mongo_to_hdfs',
+            application='/opt/airflow/dags/bronze_layer.py',
+            packages='org.mongodb.spark:mongo-spark-connector_2.12:10.1.1',
+            verbose=True,
+            conf={
+            # "spark.master": "local[*]",
+            "spark.executor.memory": "1g"
+        },
+            conn_id='spark_default_conn'
+        )
+        
+    with TaskGroup("silver_layer") as silver_layer:
+        silver_artists = PythonOperator(task_id="silver_artists", python_callable=run_artists)
+        silver_albums = PythonOperator(task_id="silver_albums", python_callable=run_albums)
+        silver_tracks = PythonOperator(task_id="silver_tracks", python_callable=run_tracks)
+        silver_feature_music = PythonOperator(task_id="silver_feature_music", python_callable=run_feature_music)
+        silver_done = DummyOperator(task_id="silver_done")
 
-    silver_artists = PythonOperator(
-        task_id="silver_artists",
-        python_callable=run_artists
-    )
+        [silver_artists, silver_albums, silver_tracks] >> silver_feature_music >> silver_done
 
-    silver_feature_music = PythonOperator(
-        task_id="silver_feature_music",
-        python_callable=run_feature_music
-    )
 
-    silver_albums = PythonOperator(
-        task_id="silver_albums",
-        python_callable=run_albums
-    )
+    with TaskGroup("gold_layer") as gold_layer:
+        gold_metadata = PythonOperator(task_id="gold_track_metadata", python_callable=run_gold_metadata)
+        gold_feature = PythonOperator(task_id="gold_feature_matrix", python_callable=run_gold_feature_matrix)
+        gold_done = DummyOperator(task_id="gold_done")
+        [gold_metadata, gold_feature] >> gold_done
 
-    silver_tracks = PythonOperator(
-        task_id="silver_tracks",
-        python_callable=run_tracks
-    )
-    gold_metadata = PythonOperator(task_id="gold_track_metadata", python_callable=run_gold_metadata)
-    gold_feature = PythonOperator(task_id="gold_feature_matrix", python_callable=run_gold_feature_matrix)
-    gold_search_index = PythonOperator(task_id="gold_track_search_index", python_callable=run_gold_search_index)
 
-    start >> silver_artists >> silver_feature_music
-    start >> silver_albums
-    start >> silver_tracks
+
+    with TaskGroup("warehouse_layer", tooltip="Final model for dashboard and ML") as warehouse_layer:
+        warehouse_dashboard = PythonOperator(task_id="warehouse_dashboard", python_callable=run_warehouse_dashboard)
+        warehouse_recommendation = PythonOperator(task_id="warehouse_recommendation", python_callable=run_warehouse_track_recommendation)
+
+        gold_metadata >> warehouse_dashboard
+        [gold_metadata, gold_feature] >> warehouse_recommendation
+
+    start >> bronze_task
+    bronze_task >> [silver_artists, silver_albums, silver_tracks]
+    [silver_artists, silver_albums, silver_tracks] >> silver_feature_music
+
     [silver_artists, silver_albums, silver_tracks] >> gold_metadata
     [silver_artists, silver_feature_music] >> gold_feature
-    [gold_metadata, gold_feature] >> gold_search_index >> end
+
+    gold_metadata >> warehouse_dashboard
+    [gold_metadata, gold_feature] >> warehouse_recommendation
+
+    warehouse_recommendation >> end
+        

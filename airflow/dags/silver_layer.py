@@ -35,22 +35,8 @@ def artists_silver_layer(spark: SparkSession, table_name : str = "artists_data")
 def feature_music_silver_layer(spark: SparkSession, table_name : str = "feature_music"):
     hdfs_uri = f"hdfs://namenode:8020/bronze_layer/{table_name}.parquet"
     df_feature = spark.read.parquet(hdfs_uri)
-    df = df_feature.withColumn("track",col("song"))
-    df = df.drop("song")
-    df = df.dropDuplicates()
+    df = df_feature.dropDuplicates()
     df.write.mode("overwrite").parquet("hdfs://namenode:8020/silver_layer/silver_feature_music.parquet")
-    df_genres=spark.read.parquet("hdfs://namenode:8020/silver_layer/silver_artists_genres.parquet")
-    df_genres_1 = df_genres.select(col("name").alias("artist"), col("artists_genres").alias("genre"))
-    df_genres_2 = df_feature.select("artist", "genre")
-    df_combined = df_genres_1.union(df_genres_2)
-    df_cleaned = df_combined.withColumn("genre", explode(split(col("genre"), ",")))
-    df_cleaned = df_cleaned.withColumn("genre", trim(col("genre")))
-    df_no_id = df_cleaned.dropDuplicates(["artist", "genre"])
-    artist_id_map = df_genres.select(col("name").alias("artist"), col("artist_id")).distinct()
-    df_with_id = df_no_id.join(artist_id_map, on="artist", how="left")
-    df_with_id = df_with_id.select("artist_id", "artist", "genre").dropDuplicates(["artist_id", "genre"])
-    df_with_id = df_with_id.filter(col("artist_id").isNotNull())
-    df_with_id.write.mode("overwrite").parquet("hdfs://namenode:8020/silver_layer/silver_artists_genres.parquet")
     print("Done feature")
 
 def albums_silver_layer(spark: SparkSession, table_name : str = "albums_data"):

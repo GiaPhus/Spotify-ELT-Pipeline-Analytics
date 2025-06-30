@@ -1,13 +1,13 @@
-from IOManager.SparkIO import SparkIO
 from pyspark.sql import SparkSession
 import os
 import urllib
+from IOManager.SparkIO import SparkIO
 from pyspark.sql.types import *
 from dotenv import load_dotenv
 from pyspark import SparkConf
 from pymongo import MongoClient
 
-load_dotenv()
+load_dotenv(dotenv_path="./.env")
 def auth_mongoDB():
     user =  urllib.parse.quote_plus(os.getenv("MONGODB_USER", ""))
     password = urllib.parse.quote_plus(os.getenv("MONGODB_PASSWORD", ""))
@@ -125,24 +125,26 @@ def get_schema(collections):
     ])
     track_features_schema = StructType([
         StructField("_id", StringType(), True),
+        StructField("track_id", StringType(), True),
+        StructField("artists", StringType(), True),
+        StructField("album_name", StringType(), True),
+        StructField("track_name", StringType(), True),
         StructField("acousticness", DoubleType(), True),
-        StructField("artist", StringType(), True),
         StructField("danceability", DoubleType(), True),
         StructField("duration_ms", LongType(), True),
         StructField("energy", DoubleType(), True),
         StructField("explicit", StringType(), True),
-        StructField("genre", StringType(), True),
         StructField("instrumentalness", DoubleType(), True),
         StructField("key", IntegerType(), True),
         StructField("liveness", DoubleType(), True),
         StructField("loudness", DoubleType(), True),
         StructField("mode", IntegerType(), True),
         StructField("popularity", IntegerType(), True),
-        StructField("song",StringType(),True),
         StructField("speechiness", DoubleType(), True),
         StructField("valence", DoubleType(), True),
         StructField("tempo", DoubleType(), True),
-        StructField("year", IntegerType(), True),
+        StructField("time_signature", IntegerType(), True),
+        StructField("track_genre", StringType(), True),
     ])
     if 'artists_data' in collections:
         return artists_schema
@@ -156,6 +158,7 @@ def get_schema(collections):
 def main() :
     uri = auth_mongoDB()
     database = os.getenv("MONGODB_DATABASE")
+    print(database)
     client = MongoClient(uri)
     db = client[database]
     collections = db.list_collection_names()
@@ -195,5 +198,4 @@ def main() :
         
 if __name__ == "__main__":
     main()
-
 

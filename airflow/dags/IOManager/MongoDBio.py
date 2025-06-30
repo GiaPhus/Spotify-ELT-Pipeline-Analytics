@@ -4,7 +4,7 @@ from contextlib import contextmanager
 import os
 from dotenv import load_dotenv
 import urllib 
-load_dotenv(dotenv_path="/opt/airflow/.env")
+load_dotenv(dotenv_path="./.env")
 
 mongo_uri = os.getenv("MONGODB_USER")
 print(mongo_uri)
