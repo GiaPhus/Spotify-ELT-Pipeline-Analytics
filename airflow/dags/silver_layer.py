@@ -22,6 +22,8 @@ def artists_silver_layer(spark: SparkSession, table_name : str = "artists_data")
     df_clean = df_clean.drop("followers")
     df_clean = df_clean.drop("href")
     df_clean = df_clean.drop("external_urls")
+    df_clean = df_clean.withColumn("uri",
+                                   regexp_replace("uri","spotify:artist:","open.spotify.com/artist/"))
     artist_genres = df_clean.select(
         col("artist_id"),col("name"),
         explode('genres').alias("artists_genres")

@@ -26,6 +26,7 @@ def gold_track_metadata(spark: SparkSession):
         artists_genres_df.groupBy("artist_id")
         .agg(concat_ws(", ", collect_set("artists_genres")).alias("genres"))
     )
+
     
     artists_df = artists_df.selectExpr(
         "artist_id",

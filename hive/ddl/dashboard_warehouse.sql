@@ -1,0 +1,38 @@
+CREATE TABLE hive.default.warehouse_track_dashboard (
+    track_id VARCHAR,
+    track_name VARCHAR,
+    duration_ms BIGINT,
+    explicit VARCHAR,
+    popularity_track INTEGER,
+    uri_track VARCHAR,
+    external_urls_tracks VARCHAR,
+    album_name VARCHAR,
+    album_type VARCHAR,
+    release_date VARCHAR,
+    label VARCHAR,
+    popularity_album INTEGER,
+    image_album VARCHAR,
+    external_urls_albums VARCHAR,
+    artist_name VARCHAR,
+    popularity_artist INTEGER,
+    "followers number" INTEGER,
+    artist_spotify_id VARCHAR,
+    type_artist VARCHAR,
+    uri_artist VARCHAR,
+    external_urls_artists VARCHAR,
+    images_artists VARCHAR,
+    genres VARCHAR,
+    danceability DOUBLE,
+    energy DOUBLE,
+    loudness DOUBLE,
+    speechiness DOUBLE,
+    acousticness DOUBLE,
+    instrumentalness DOUBLE,
+    liveness DOUBLE,
+    valence DOUBLE,
+    tempo DOUBLE
+)
+WITH (
+    external_location = 'hdfs://namenode:8020/warehouse_layer/warehouse_track_dashboard.parquet/',
+    format = 'PARQUET'
+);
