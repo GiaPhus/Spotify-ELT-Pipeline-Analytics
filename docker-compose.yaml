@@ -397,18 +397,18 @@ services:
     networks:
       - spotify_network
 
-  metabase:
-    image: metabase/metabase:latest
-    container_name: metabase
-    ports:
-      - "3000:3000"
-    environment:
-      - MB_DB_FILE=/metabase.db
-      - MB_LOCALE=en
-    volumes:
-      - ./metabase:/metabase.db
-    networks:
-      - spotify_network
+  # metabase:
+  #   image: metabase/metabase:latest
+  #   container_name: metabase
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - MB_DB_FILE=/metabase.db
+  #     - MB_LOCALE=en
+  #   volumes:
+  #     - ./metabase:/metabase.db
+  #   networks:
+  #     - spotify_network
   
   hive-metastore-db:
     image: postgres:13

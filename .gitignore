@@ -45,7 +45,6 @@ dags/
 config/
 hive-metastore/
 logs/
-metabase/
 plugins/
 postgresql_data/
 postgresql/
@@ -57,3 +56,6 @@ airflow.cfg
 artists_stream.txt
 hadoop.env
 hive/metastore/
+
+
+metabase
