@@ -28,7 +28,6 @@ Thumbs.db
 logs/
 
 
-.DS_Store
 .ipynb_checkpoints/
 .env
 .vscode/
@@ -58,4 +57,8 @@ hadoop.env
 hive/metastore/
 
 
+hive-metastore/
+
 metabase
+
+hadoop_datanode/
